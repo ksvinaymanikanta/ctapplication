@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKING</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        strong {
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Details</h1>
+    <ul>
+        {% for i in data %}
+        <hr style="border: 3px solid black;">
+            <li>
+                <strong>First Name :</strong> {{ i.first_name }}<br>
+                <strong>Middle Name:</strong> {{ i.middle_name }}<br>
+                <strong>Last Number:</strong> {{ i.last_name }}<br>
+                <strong>DOB :</strong> {{ i.dob }}<br>
+                <strong>Gender :</strong> {{ i.gender }}<br>
+                <strong>ssn :</strong> {{ i.ssn }}<br>
+            </li>
+            <h2>contact information</h2>
+            <li>
+                <strong>Working Number :</strong> {{ i.work_phone }}<br>
+                <strong>Home number :</strong> {{ i.home_phone }}<br>
+                <strong>Mobile number :</strong> {{ i.mobile_phone }}<br>
+                <strong>Email :</strong> {{ i.email }}<br>
+            </li>
+            <h2>Address</h2>
+            <li>
+                <strong>Address1 :</strong> {{ i.address1 }}<br>
+                <strong>Address2 :</strong> {{ i.address2 }}<br>
+                <strong>Street :</strong> {{ i.street }}<br>
+                <strong>state :</strong> {{ i.state }}<br>
+                <strong>zip_code :</strong> {{ i.zip_code }}<br>
+                <strong>country :</strong> {{ i.country }}<br>
+            </li>
+            <h2>Employment</h2>
+            <li>
+                <strong>company :</strong> {{ i.company }}<br>
+                <strong>employment_status :</strong> {{ i.employment_status }}<br>
+                <strong>job_title :</strong> {{ i.job_title }}<br>
+                <strong>employment_duration :</strong> {{ i.employment_duration }}<br>
+            </li>
+            <h2>Financial Information</h2>
+            <li>
+                <strong>Income :</strong> {{ i.income }}<br>
+                <strong>bank_account :</strong> {{ i.bank_account }}<br>
+                <strong>bank_name :</strong> {{ i.bank_name }}<br>
+            </li>
+            <h2>Preferences & T&C</h2>
+            <li>
+                <strong>language :</strong> {{ i.language }}<br>
+                <strong>agreed_terms :</strong> {{ i.agreed_terms }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

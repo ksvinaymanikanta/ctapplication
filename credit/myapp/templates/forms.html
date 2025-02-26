@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <style>
+        /* Buttons */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn.cancel {
+    background-color: #4d15bb;
+    color: rgb(199, 181, 181);
+}
+.btn.previous{
+    background-color: #4d15bb;
+    color: rgb(199, 181, 181);
+}
+
+.btn.submit {
+    background-color: #1d0fb1;
+    color: rgb(220, 218, 224);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+    </style>
+</head>
+<body>
+        <div class="buttons">
+            <button class="btn previous" onclick="window.location.href='http://127.0.0.1:8000/terms%20and%20conditions'">Previous</button>
+            <button class="btn submit" onclick="window.location.href='http://127.0.0.1:8000/registration'">Registration</button>
+            <button class="btn submit" onclick="window.location.href='http://127.0.0.1:8000/user details'">user details</button>
+        </div>
+    </form>
+</body>
+</html>
+
